@@ -1,10 +1,15 @@
 package com.company;
 
 import com.company.DB_Darbai.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Application {
 
     /* Paklausti kas prisijunge vartotojas ar admin
     VARTOTOJAS prisijungimas
@@ -33,7 +38,7 @@ public class Main {
     kelioniu ataskaita
     */
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         System.out.println("Sveiki atvyke i DataDog test programele - " +
                 " transporto priemoniu ivedimas ir sunaudojamo kuro nustatymas");
         System.out.println();
@@ -103,8 +108,19 @@ public class Main {
 
         }
 
+*/
+    public static void main(String[] args) {
+        launch(args);
+    }
 
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.show();
     }
 }
+
 
 
