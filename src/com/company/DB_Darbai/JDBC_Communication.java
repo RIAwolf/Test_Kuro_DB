@@ -11,7 +11,7 @@ public class JDBC_Communication {
 
     public JDBC_Communication() {
         try {
-            _connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kcs", "root", "");
+            _connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdatadog", "root", "");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -27,6 +27,8 @@ public class JDBC_Communication {
         return null;
     }
 
+
+
     public boolean vykdykVeiksma(String uzklausa) {
         try {
             Statement statement = _connection.createStatement();
@@ -38,7 +40,7 @@ public class JDBC_Communication {
         return false;
     }
 
-    // parasyti metoda kuris atvaizduotu bet koki ResultSet su pavadinimais pirmoje eiluteje
+
 
     public void spausdinkLentele(ResultSet _rezultatai) {
         try {
